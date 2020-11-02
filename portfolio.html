@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Link></Link>
+    <title>My Portfolio</title>
+    <style>
+        body{
+            margin:0px 0px;
+            background-image: linear-gradient(120deg,rgba(255, 255, 0, 0.6),rgba(255, 0, 0, 0.6)),
+            url("FRANK_300.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+        .main-nav ul{
+            display: grid;
+            grid-gap: 20px;
+            padding: 0;
+            margin: 0px 20px 30px 20px;
+            list-style: none;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .main-nav ul li{
+            position: relative;
+        }
+        .main-nav ul ul{
+            display: none;
+        }
+        .main-nav li:hover>ul{
+            display: block;
+            width: 100%;   /*inherit this property from the immediate parent*/
+            margin: inherit;
+            position: absolute;
+        }
+        .main-nav a {
+            background: palevioletred;
+            display: block;
+            text-decoration: none;
+            padding: 0.8rem;
+            margin-bottom: 4px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            color: rgb(70, 5, 95);
+        }
+        .main-nav a:hover{
+            background-color: rgb(231, 83, 157);
+        }
+        h1{
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 3rem;
+            border-bottom: 2px solid;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.63);
+            margin-top: 0px;
+            padding: 70px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            animation: header-slide 2.5s; /*animation for header dropdown effect is called on this line*/
+        }
+        h1:hover{
+            background-color: rgba(255, 255, 255, 0.418);
+            color: #000;
+            border-bottom: 2px solid #000;
+            cursor: pointer;
+        }
+        @keyframes header-slide{ /*styling animation for header dropdown*/
+            0%{
+                padding: 0px;
+            }
+        }
+        h2{
+            text-transform: capitalize;
+        }
+        section, .contact-us{
+            padding: 60px;
+            margin:70px 90px;
+            background-color: rgba(255, 255, 255, 0.644);
+            border:9px solid plum;
+            border-radius: 25px;
+            
+        }
+        section>p{
+            text-indent: 15px;
+            text-align: justify;
+            line-height: 25px;
+        }
+        span>a{
+            margin: 0px 90px;
+            padding: 14px;
+            background-color: #fff;
+            text-decoration: none;
+            color: #000;
+            font-weight: bolder;
+        }
+        span>a:hover{
+            background-color: rgb(167, 85, 187);
+            color: #fff;
+        }
+        div>input{
+            display: block;
+            border: #000 solid;
+            margin: 10px;
+            width: 250px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.548);
+            color: #fff;
+            padding: 0 4px;
+            font-family: Verdana;
+        }
+        #Msg{
+            height: 70px;
+            overflow: hidden;
+            text-overflow: clip;
+        }
+        #btn{
+            border: none;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            width: 260px;
+            height: 50px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #btn:hover{
+            background-color: #000;
+            color: #fff;
+        }
+        .contact-us>p{
+            text-transform: capitalize;
+            font-weight: bold;
+            margin: 10px;
+        }
+        .contact1{
+            display: inline;
+            font-weight: bolder;
+        }
+        table{
+            margin:90px auto;
+            font-size: 20px;
+            width: 80%;
+            height: 100%;
+            border-spacing: 10px 5px;
+        }
+        th{
+            height: 50px;
+        }
+        td{
+            text-align: center;
+            height: 40px;
+        }
+        td.time{
+            font-weight: bolder;
+        }
+        #tittle{
+            text-align: center;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+        tr:nth-child(even){
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(odd){
+            background-color: rgb(218, 215, 212);
+        }
+        ul#n{
+            list-style-position: inside;
+        }
+
+        div.box2{
+            max-width: 500px;
+            border: 2px solid green;
+            margin: 10px auto;
+            position: absolute;
+            bottom: 30px;
+            right: 10px;
+        }
+        ::selection {
+            color: red;
+            background: yellow;
+        }
+    </style>
+    <link rel="stylesheet" href="https://">  <!--link to include fonts from an online resource-->
+</head>
+<body>
+    <div class="wrapper">
+    <span id="top"><h1>welcome to my Portfolio</h1></span>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">profession</a></li>
+            <li><a href="">Services</a>
+                <ul>
+                    <li><a href="">Electrical</a></li>
+                    <li><a href="">Mechanical</a></li>
+                </ul>
+            </li>
+            <li><a href="">Galleries</a></li>
+        </ul>
+    </nav>
+
+    
+        <span><a href="#bottom">Goto Botttom</a></span>
+    
+    <section class="intro">
+        <h2>introduction</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, officiis mollitia! Nemo quia 
+            cum quam quae sint. Unde, recusandae! Voluptates repellat odit necessitatibus, nemo autem quisquam 
+            suscipit consectetur dolorum tempora culpa ex iste quae quos ipsa, repudiandae facilis? Quo quas 
+            ut molestias ipsum praesentium harum at, expedita vero, eius totam, doloribus sint hic adipisci dolore. 
+            Nulla atque suscipit velit eum similique praesentium ipsa molestiae architecto, sit, libero iusto, deserunt 
+            ut magnam sunt nisi cumque alias provident dolorum blanditiis deleniti fugiat! Tempora ullam necessitatibus 
+            distinctio odio aliquid dolorum libero tempore id vero ab eligendi laudantium, alias, eum, maiores doloribus. 
+            Inventore itaque fugiat maxime ipsum fuga delectus ea totam, ad, aut saepe assumenda, architecto ut esse ducimus 
+            impedit illum quisquam aliquid molestias reiciendis a? Maxime enim aliquid, repudiandae voluptas dolor voluptatem 
+            fuga nesciunt aperiam. Vitae id nobis laboriosam necessitatibus dolores! Facere inventore provident debitis neque 
+            rchitecto quia, illum aspernatur aliquam mollitia dolorem esse corrupti quam officiis ipsam numquam, natus quaerat 
+            laborum, tempora velit maiores! Doloribus unde, magni iure explicabo modi aspernatur, distinctio, itaque fugit expedita deleniti quos 
+            dolore! Est ad ullam asperiores! Adipisci illo eaque pariatur. Repudiandae adipisci esse sit perferendis placeat, similique sunt corrupti
+             explicabo officiis reprehenderit deleniti molestiae deserunt dolore quaerat expedita delectus minima ex, quos fugiat voluptatem. Facere
+              culpa non et doloribus, magnam iusto possimus quia deleniti aut veritatis laboriosam distinctio architecto. Repellat ratione mollitia 
+              deserunt sunt aut magnam ad quaerat! Eos pariatur delectus assumenda cupiditate quae, nam tempore illo velit veritatis. Ex expedita in
+            aperiam possimus corrupti, hic facere cupiditate praesentium laborum doloremque aspernatur vel illum? Recusandae distinctio laborum id 
+               ullam eius, error rerum quam quibusdam corporis nihil pariatur quod sed animi iure unde fugiat dolores itaque esse optio laboriosam doloribus quaerat. Deleniti ex unde debitis harum commodi amet explicabo voluptate dolorum 
+            temporibus dolores numquam, asperiores porro deserunt!</p>
+    </section>
+
+    <section class="career">
+        <h2>profession and career</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur 
+            adipisicing elit. Voluptate fugit fuga quo magni explicabo, 
+            itaque eos consequuntur quaerat temporibus provident cum illum nobis 
+            aspernatur adipisci delectus numquam sit sed nulla, magnam, 
+            iusto deserunt ab ex impedit? Dolores nobis unde sapiente 
+            dignissimos voluptate obcaecati iste! Totam porro et rerum 
+            explicabo modi blanditiis numquam exercitationem aspernatur facilis 
+            alias, necessitatibus dolorem provident aut facere vero nobis 
+            reprehenderit, dolor cum culpa incidunt nesciunt nulla suscipit 
+            tempora. Id saepe corporis eveniet molestiae temporibus culpa l
+            abore quis nulla sed assumenda debitis dicta hic, 
+            recusandae ipsam. Natus voluptate suscipit quos tenetur excepturi veniam alias vitae qui optio sit dolor, ducimus ratione dolorem facere amet expedita sunt a reprehenderit sint iste tempore est rerum, nihil earum. Vitae impedit incidunt veniam corporis iusto ullam, quod assumenda itaque nemo sequi voluptatem obcaecati quia sit vel maiores, beatae sapiente, numquam exercitationem suscipit ab nesciunt est. Quam error odio officiis necessitatibus neque nihil enim, id voluptas aliquid placeat ea corrupti exercitationem ex rem obcaecati dolorem asperiores quos doloribus quidem. Laudantium ab nihil aperiam deserunt. Inventore magni minima alias, quibusdam similique vero vitae quod in quae sed eos sequi reiciendis officiis quisquam, doloremque illo rerum esse fugit labore deserunt, culpa veniam. Voluptates autem et quia est tenetur tempora sint porro quam quasi omnis laboriosam similique ullam unde repellat nam eum laudantium, beatae vel magnam excepturi, esse labore vitae quidem! Non, possimus mollitia? Id, vel ea? Quia minima dolores ipsa quibusdam laborum labore ipsam, sunt ratione, ad expedita adipisci unde assumenda, incidunt at aliquid tempora itaque minus. Natus ducimus earum aliquid sint, vel ex corrupti ullam nostrum, eius deserunt hic optio illo ab impedit praesentium explicabo, alias excepturi dicta dolore possimus ad eos expedita. Voluptatem, mollitia iure. Omnis, quasi at? Quam nemo corporis quae accusantium harum reiciendis ratione expedita? Illo voluptas consequatur aliquam ipsam dolor deserunt aliquid. Neque sunt blanditiis facilis asperiores autem, doloribus iure fugiat quasi laborum praesentium eos similique nihil sed repellendus, temporibus tempore ipsam quia tempora. Libero praesentium consequuntur excepturi hic magnam ab incidunt dolor? Delectus perferendis ipsum soluta, ad quis, ex sequi vitae debitis aliquam officia similique natus numquam dolorem consequatur. Odit adipisci nisi fugit ad. Officia veritatis neque, at fugit magnam perferendis magni iusto, fuga facilis blanditiis ab odit quo quisquam eaque atque quia. Beatae sint, maiores dolorum ratione et excepturi dolorem obcaecati. Esse laudantium ratione doloremque reiciendis sint ut eligendi ab fugiat iste molestias. Architecto debitis porro sint?</p>
+    </section>
+    <section class="hobby">
+        <h2>hobbies</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi explicabo natus est impedit tempora corporis sed 
+            temporibus voluptates repellat neque.</p>
+            <div><h5 id="list">They are as follows:</h5>
+                <ol>
+                    <li>reading</li>
+                    <li>cooking</li>
+                    <li>gisting</li>
+                    <li>commuting</li>
+                </ol>
+            </div>
+    </section>
+
+    <section class="contact">
+        <h2>contact</h2>
+        <address>
+            <div class="contact1">
+                <label>Email: ajifrank75@gmail.com</label>
+	        </div>
+    
+            <div class="contact1">
+                <label>(+234)8034287907</label>
+            </div>
+            <div class="contact1">
+                No. 122 Ikpa Road, Uyo.
+            </div>
+        </address>
+    </section>
+
+    <div class="contact-us">
+        <p>contact us:</p>
+        <input type="text" id="Name" placeholder="First Name">
+        <input type="mail" id="Email" placeholder="Your Email">
+        <input type="text" id="Msg" placeholder="Your Message...">
+        <input type="button" id="btn" value="SUBMIT">
+    </div>
+    </div>
+    
+    <table>
+        <tr id="tittle">
+            <th colspan="6">course time table</th>
+        </tr>
+        <tr class="odd">
+            <th>Hours</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thurs</th>
+            <th>Fri</th>
+        </tr>
+    
+        <tr class="even">
+            <td class="time">8:00am</td>
+            <td>GRE311</td>
+            <td>GST211</td>
+            <td>GST212</td>
+            <td>GSS101</td>
+            <td rowspan="3">PROJECT</td>
+        </tr>
+        <tr class="odd">
+            <td class="time">10:00am</td>
+            <td>GRE311</td>
+            <td>GST211</td>
+            <td>GST212</td>
+            <td>GSS101</td>
+        </tr>
+        <tr class="even">
+            <td class="time">12:00pm</td>
+            <td>GRE311</td>
+            <td>GST211</td>
+            <td>GST212</td>
+            <td>GSS101</td>
+        </tr>
+    </table>
+    <span id="bottom">
+        <a href="#top">Goto Top</a>
+    </span>
+    <ul id="n">
+        <li>FRANK</li>
+        <li>FRANK</li>
+        <li>FRANK</li>
+    </ul>
+    
+    <div class="box2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, optio.
+    </div>
+</body>
+</html>
